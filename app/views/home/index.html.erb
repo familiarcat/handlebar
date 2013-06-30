@@ -1,2 +1,182 @@
-<h1>Handle Bar Home</h1>
-
+	<head>
+		<%= stylesheet_link_tag "home" %>
+		<%= stylesheet_link_tag "lightbox" %>
+	</head>
+	<body onload="$('html, body').animate({scrollTop:48}, 500)">
+		<div id="wrapper">
+			
+			<div id="fixed">
+				<div id="header">
+					<h1>
+						<a class="scroll" href="#home">Handlebar</a>
+					</h1><a id="link-email" href="mailto:contact@handlebarstl.com" name="link-email">contact@handlebarstl.com</a>
+					<div id="access">
+						<ul>
+							<li>
+								<a class="eats scroll" href="#eats">Eats</a>
+							</li>
+							<li>
+								<a class="drinks scroll" href="#drinks">Drinks</a>
+							</li>
+							<li>
+								<a class="events scroll" href="#events">Events</a>
+							</li>
+							<li>
+								<a class="specials scroll" href="#specials">Specials</a>
+							</li>
+						</ul>
+					</div>
+					<div id="social">
+						<ul>
+							<li>                                                                          
+								<a class="facebook" onClick="goToBlog()">Find us on Facebook</a>
+							</li>
+							<li>
+								<a class="twitter" href="http://www.twitter.com/HandleBarSTL">Follow us on Twitter</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="page">
+			   
+				<div id="home_section">
+				<h2 id="home">
+					Welcome to Handlebar
+				</h2>
+				<p>
+					<strong>HandleBar</strong> came to life in September of 2010, a locally owned home-bar for all bike riders to take a break and enjoy the celebration of their one true love - the bicycle. While HandleBar caters to urban bikers, we welcome everyone who steps through our door even if you haven't been on a bike for years … or ever.
+				</p>
+				<p>
+					Be warned, however, it's hard not to be converted.
+				</p>
+				<p>
+					HandleBar is also a sort of bicycle art gallery, we display, ride and sell a variety of unique bicycles made by local talent, so be it a lowrider or a cruiser, a road bike or a chopper, or even a two story tall bike, you'll find the right fit at the HandleBar!
+				</p>
+				<p>
+					Here are some <a href="http://www.flickr.com/photos/26729607@N04/sets/72157626044936373/show/">photos</a> of us, our friends, bikes, and projects for you to check out.
+				</p>
+				<p>
+					If you are interested in hosting your next Party, Happy Hour, Fundraiser, or any other fun filled event, please feel free to <a href="mailto:contact@handlebarstl.com">e-mail</a> or call us!
+				</p>
+				</div>
+				<div id="eats_section">
+				<h2 id="eats">
+					Fantastic Food
+				</h2>
+				<div id="menu_list">
+					<% @menu_items.each do |item| %>
+						<a href="<%=item.image.file.url(:large)%>" rel="lightbox" title="<%=item.description%> <a href='<%=item.image.file.url(:large)%>'/><h4><%=number_to_currency(item.price)%><h4></a>">
+						<div id="menu_item">
+							<h4><%=item.name%></h4>
+							<% if item.image.file.url(:small) %>
+								<img src="<%=item.image.file.url(:small)%>"/>
+							<% end %>
+							<h5><strong><%=number_to_currency(item.price)%></strong></h5>
+							<h5><%=item.description%></h5>
+						</div>
+						</a>
+						<br/>
+					<%end%>
+				</div>
+				<p>
+					HandleBar offers home made Russian Blinchiki and Pelmeni, Gourmet Pizzas for every taste, and vegetarian friendly choices.
+				</p>
+				<p>
+					Check out our <a href="Food.pdf">Food Menu</a>.
+				</p>
+				<p>
+					<strong>Come get your fill!</strong>
+				</p>
+				</div>
+				<div id="drinks_section">
+				<h2 id="drinks">
+					Delightful Drinks
+				</h2>
+				<p>
+					<strong>HandleBar</strong> has happy hour specials daily, big deals on PBR, and a beer list to please anyone in need of a brew. The bar staff is always whipping up fresh and inventive concoctions, so come in frequently to see what's new!
+				</p>
+				<p>
+					Check out our <a href="Booze.pdf">Signature Shot and Cocktail list Here</a>.
+				</p>
+				<p>
+					We also focus on regionally owned and brewed beers and take great pride in the beers we've selected. There's something for everyone on tap, and our bottle list is top notch. Be sure and try a local brew you've never had!
+				</p>
+				<p>
+					Check out our <a href="Beer.pdf">Beer List Here</a>.
+				</p>
+				</div>
+				<div id="events_section">
+				<h2 id="events">
+					Entertaining Events
+				</h2>
+				<div id="events_list">
+					<% @events.each do |event| %>
+						<h4><%=event.name%></h4>
+						<h5><strong><%=event.start_at.strftime("%m/%d/%Y")%>:</strong> <%=event.start_at.strftime("%I:%M%p")%> - <%=event.end_at.strftime("%I:%M%p")%></h5>
+						<h5><%=event.description%></h5>
+						<br/>
+					<%end%>
+				</div>
+			
+				<p>
+					HandleBar showcases some of the finest talent in the St. Louis area. From DJs to live bands and mind bending trivia nights, check this month’s <a href="Events.pdf">Event Schedule</a> and see what’s happening!
+				</p>
+				</div>	
+			   	<div id="specials_section">
+				<h2 id="specials">
+					Spectacular Specials
+				</h2>
+				<h3>
+					Happy Hour
+				</h3>
+				<p>
+					<strong>Daily from 4-8pm</strong>: $1 Off Draft Beers &amp; $2 Bartender's Choice Beer Bottle
+				</p>
+				<h3>
+					Tuesdays
+				</h3>
+				<p>
+					<strong>Pitcher Specials 8pm-close</strong>
+				</p>
+				<h3>
+					Wednesdays
+				</h3>
+				<p>
+					<strong>$1.50 PBR tallboys all night</strong>
+				</p>
+				<h3>
+					Thursdays
+				</h3>
+				<p>
+					<strong>Any Schlafly 5-for-15 buckets 7pm-close</strong>
+				</p>
+				<h3>
+					Fridays
+				</h3>
+				<p>
+					<strong>$3 well drinks and Bartender's Shot Special all night</strong>
+				</p>
+				<h3>
+					Saturdays
+				</h3>
+				<p>
+					<strong>$4 Jameson- sny way you like it and Bartender's Shot Special</strong>
+				</p>
+				<h3>
+					Sundays
+				</h3>
+				<p>
+					<strong>$3 White Russians</strong>
+				</p>
+				<p>
+					We're an impulsive bunch, so follow us on <a href="http://www.twitter.com/HandleBarSTL">Twitter</a> and <a href="http://www.facebook.com/HandleBarSTL#!/HandleBarSTL?v=info">Facebook</a> for spur of the moment specials and deals.
+				</p>
+			</div>
+			<div id="blog_section">
+			</div>
+			</div>
+		</div>
+		<div id="bg"></div>
+	</body>

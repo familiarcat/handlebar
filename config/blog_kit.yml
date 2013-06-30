@@ -3,7 +3,7 @@
 
 # ================ Visual settings ================
 
-blog_name: '__EDIT BLOG_NAME__'
+blog_name: 'HandleBlog'
 
 # Show "Published By ..."
 show_user_who_published: true
@@ -41,7 +41,7 @@ show_link_numbers: false
 
 # Image Uploading options - assume paperclip is installed
 paperclip:
-  # path: ':rails_root/public/system/:attachment/:id/:style/:filename'
+  path: ':rails_root/public/system/:attachment/:id/:style/:filename'
   
   # # S3 support
   # :storage: :s3

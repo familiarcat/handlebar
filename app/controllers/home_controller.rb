@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    puts "hello world"
+    @events = Event.last(5)
+    @menu_items = MenuItem.where(:highlight => true)
   end
 end

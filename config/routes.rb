@@ -1,11 +1,18 @@
 Handlebarstl::Application.routes.draw do
 
+  resources :image_galleries
+
+  resources :images
+
+  resources :menu_items
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   
   resources :home
   resources :users
   resources :events
+  resources :menu_items
   
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
   

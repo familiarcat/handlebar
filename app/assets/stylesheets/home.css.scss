@@ -1,3 +1,288 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* ============================== */
+/* ! Layout for desktop version */
+
+/* ============================== */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: Georgia, serif;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 1em; /* 12px */
+	line-height: 1.5em; /* 18px */
+	margin: 0 0 1.5em 0;
+}
+.class-for-24px {
+	font-size: 2em; /* 24px */
+	line-height: 1.5em; /* 36px */
+	margin-top: 0.75em;
+	margin-bottom: 0em;
+}
+.class-for-22px {
+	font-size: 1.8333em; /* 22px */
+	line-height: 1.6364em; /* 36px */
+	margin-top: 0.8182em;
+	margin-bottom: 0em;
+}
+.class-for-20px {
+	font-size: 1.6667em; /* 20px */
+	line-height: 1.8em; /* 36px */
+	margin-top: 0.9em;
+	margin-bottom: 0em;
+}
+.class-for-18px {
+	font-size: 1.5em; /* 18px */
+	line-height: 1em; /* 18px */
+	margin-top: 1em;
+	margin-bottom: 0em;
+}
+.class-for-16px {
+	font-size: 1.3333em; /* 16px */
+	line-height: 1.125em; /* 18px */
+	margin-top: 1.125em;
+	margin-bottom: 0em;
+}
+.class-for-14px {
+	font-size: 1.1667em; /* 14px */
+	line-height: 1.2857em; /* 18px */
+	margin-top: 1.2857em;
+	margin-bottom: 0em;
+}
+a {
+	color: #FBCC06;
+	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+}
+a:hover {
+	text-decoration: none;
+}
+strong {
+	font-style: italic;
+}
+#wrapper {
+	text-align: center;
+	min-height: 100%;
+	position: relative;
+	z-index: 2;
+	margin: 0;
+	padding: 0;
+}
+#bg {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+	background: url(bg.jpg) no-repeat top center #1E0901;
+}
+#fixed {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	margin: 0;
+	padding: 0;
+}
+#header {
+	background: url(bg-header.png) no-repeat top center transparent;
+	width: 1033px;
+	margin: 0 auto;
+	height: 25em;
+	position: relative;
+	text-align: left;
+}
+#header h1 a {
+	display: block;
+	position: absolute;
+	height: 12em;
+	width: 300px;
+	background: url(logo.png) no-repeat top center transparent;
+	text-indent: -999em;
+	margin: 0;
+	padding: 0;
+}
+#header h1 a:hover {
+	background: url(logo.png) no-repeat 0px -300px transparent;
+}
+#header a#link-email {
+	display: block;
+	width: 230px;
+	height: 1.5em;
+	position: absolute;
+	top: 16em;
+	left: 425px;
+	text-indent: -999em;
+	background: url(bg-email.png) no-repeat top center transparent;
+}
+#header a#link-email:hover {
+	background: url(bg-email.png) no-repeat center -1.5em transparent;
+}
+#header #access {
+	width: 260px;
+	float: right;
+	margin: 5.5em 100px 0 0;
+}
+#access li {
+	list-style-type: none;
+}
+#access li a.eats, #access li a.drinks, #access li a.events, #access li a.specials {
+	display: block;
+	width: 260px;
+	height: 36px;
+	text-indent: -999em;
+	margin: 0;
+	padding: 0;
+}
+#access li a.eats:hover {
+	background: url(bg-eats.png) no-repeat -2px top transparent;
+}
+#access li a.eats {
+	background: url(bg-eats.png) no-repeat -2px -38px transparent;
+}
+#access li a.drinks:hover {
+	background: url(bg-drinks.png) no-repeat top left transparent;
+}
+#access li a.drinks {
+	background: url(bg-drinks.png) no-repeat left -36px transparent;
+}
+#access li a.events:hover {
+	background: url(bg-events.png) no-repeat top left transparent;
+}
+#access li a.events {
+	background: url(bg-events.png) no-repeat left -36px transparent;
+}
+#access li a.specials:hover {
+	background: url(bg-specials.png) no-repeat top left transparent;
+}
+#access li a.specials {
+	background: url(bg-specials.png) no-repeat left -38px transparent;
+	height: 38px;
+}
+#social {
+	width: 120px;
+	float: right;
+	margin: 1.5em 100px 0 0;
+	clear: right;
+}
+#social li {
+	float: left;
+}
+#social li a {
+	display: block;
+	width: 55px;
+	height: 55px;
+	text-indent: -999em;
+}
+#social li a.facebook {
+	background: url(bg-facebook.png) no-repeat top left transparent;
+	list-style: none;
+	margin: 0 10px 0 0;
+}
+#social li a.facebook:hover {
+	background: url(bg-facebook.png) no-repeat left -55px transparent;
+}
+#social li a.twitter {
+	background: url(bg-twitter.png) no-repeat top left transparent;
+	list-style: none;
+}
+#social li a.twitter:hover {
+	background: url(bg-twitter.png) no-repeat left -55px transparent;
+}
+#page {
+	background: url(bg-contents.jpg) no-repeat center top #33000B;
+	width: 800px;
+	margin: 22em auto 0 auto;
+	padding: 3em 40px;
+	-webkit-box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, .4);
+	box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, .4);
+	color: #BEBEBE;
+	text-align: left;
+	float: center;
+}
+
+#chain_container {
+	float:right;
+	top:-100px;
+	right:20%;
+	width:200px;
+	height:800px;
+	background-color:red;
+}
+
+#home_section, #eats_section, #drinks_section, #events_section, #specials_section, #blog_section {
+	float: center;
+	background:red;
+	clear: left;
+	width: 750px;
+}
+#events_list, #menu_list {
+	float: left;
+	background:blue;
+	width: 20em;
+	margin-bottom: 3em;
+	padding-left: 1em;
+}
+
+#menu_item h4 {
+	margin-bottom: 1em;
+}
+
+#menu_item img h5{
+	margin-bottom: .5em;
+}
+
+h2 {
+	font-family: "futura-pt",sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 3em; /* 36px */
+	line-height: 1em; /* 36px */
+	margin: 1.5em 0 .5em 0;
+	text-shadow: 0px 0px 4px #000;
+	filter: dropshadow(color=#000, offx=0, offy=0);
+}
+h3 {
+	font-family: "futura-pt",sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 2em; /* 24px */
+	line-height: 1.5em; /* 36px */
+	margin: 0.75em 0 0 260px;
+	text-shadow: 0px 0px 4px #000;
+	filter: dropshadow(color=#000, offx=0, offy=0);
+}
+h4 {
+	font-family: Georgia, serif;
+	font-style: bold;
+	font-weight: 400;
+	font-size: 1.5em;
+	color: #FBCC06;
+}
+h5 {
+	font-family: "futura-pt", sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	font-size: 1em;
+}
+
+#page p {
+	font-size: 1.1667em; /* 14px */
+	line-height: 1.2857em; /* 18px */
+	margin: 0 0 1.2857em 260px;
+}

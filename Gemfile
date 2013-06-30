@@ -6,6 +6,7 @@ gem 'sqlite3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # handlebarstl gems
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'event-calendar', :git => 'git://github.com/elevation/event_calendar.git', :require => 'event_calendar'
 gem "will_paginate", :git => "git://github.com/mislav/will_paginate.git", :branch => "rails3"

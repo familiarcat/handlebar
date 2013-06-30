@@ -61,7 +61,7 @@ RailsAdmin.config do |config|
   # config.excluded_models = [User]
 
   # Add models here if you want to go 'whitelist mode':
-  config.included_models = [User, BlogPost, Event]
+  config.included_models = [User, BlogPost, Event, MenuItem, BlogImage, Image, ImageGallery]
 
   # Application wide tried label methods for models' instances
   # config.label_methods << :description # Default is [:name, :title]
@@ -91,6 +91,10 @@ RailsAdmin.config do |config|
   config.model BlogPost do
     parent User
   end
+  config.model MenuItem do
+    label "Menu Items"
+  end
+  
   #
   #  ==> Model specific configuration
   # Keep in mind that *all* configuration blocks are optional.
@@ -142,7 +146,6 @@ RailsAdmin.config do |config|
   #  - has_many/has_one associations in list section (hidden by default for performance reasons)
   # Fields may also be marked as read_only (and thus not editable) if they are not mass-assignable by current_user
   
-
   # config.model User do
   #   # Found associations:
 
@@ -160,5 +163,6 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
-
+ 
+  
 end
